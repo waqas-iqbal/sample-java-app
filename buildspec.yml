@@ -5,10 +5,11 @@ phases:
     runtime-versions:
       java: corretto11  # Specify Java version. Change it according to your project needs.
     commands:
-      - echo "Installing Maven"
-      - yum install -y maven  # Install Maven
-      - echo "Maven version:"
-      - mvn -version  # Check the Maven version installed
+      # - echo "Installing Maven"
+      # - yum install -y maven  # Install Maven
+      # - echo "Maven version:"
+      # - mvn -version  # Check the Maven version installed
+        - echo " Nothing to do here"
   pre_build:
     commands:
       - echo "Cleaning project..."
