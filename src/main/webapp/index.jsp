@@ -1,151 +1,152 @@
 <!DOCTYPE html>
-<!-- Template by html.am -->
-<html>
-        <head>
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-                <title>Fixed Width 2 Orange</title>
-                <style type="text/css">
-                        html, #page { padding:0; margin:0;}
-                        body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;} 
-                        h1, h2, h3, h4, h5, h6 {color:darkorange;}
-                        #page { background:#eee;}
-                        #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .navbar ul li {
+            display: inline;
+        }
+        
+        .navbar ul li a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .navbar ul li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
 
-                        /* Logo */
-                        #logo { padding:10px; width:auto; float:left;}
-                        #logo h1 a, h1 a:hover { color:darkorange; text-decoration:none;}
-                        #logo h1 span { color:#f9ebdb;}
+        /* Section Styling */
+        .section {
+            padding: 80px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
 
-                        /* Header */
-                        #header { background:#eee; }
-                        #header-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
+        .section:nth-child(even) {
+            background-color: #ecf0f1;
+        }
 
-                        /* Feature */
-                        .feature { background:#eee;padding:0;}
-                        .feature-inner { margin:auto;padding:10px;width:970px;background:orange; }
-                        .feature-inner h1 {color:#f9ebdb;font-size:32px;}
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #2980b9;
+        }
 
-                        /* Menu */
-                        #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
-                        #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
-                        #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
-                        #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:orange; text-decoration:none;}
-                        #top-nav ul li.active a, #top-nav ul li a:hover { color:#f9ebdb;}
+        .section p, .section ul {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.2em;
+        }
 
-                        /* Content */
-                        #content-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
-                        #content #contentbar { margin:0; padding:0; float:right; width:760px;}
-                        #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
-                        #content #sidebar { padding:0; float:left; width:200px;}
-                        #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
-                        #content #sidebar .widget h3 a { text-decoration:none;}
-                        #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
-                        #content #sidebar .widget ul li { margin:0;}
-                        #content #sidebar .widget ul li { padding:4px 0; width:185px;}
-                        #content #sidebar .widget ul li a { color:orange; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
-                        #content #sidebar .widget ul li a:hover { color:#f9ebdb; font-weight:bold; text-decoration:none;}
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-                        /* Footerblurb */
-                        #footerblurb { background:#eee;color:orange;}
-                        #footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#f9ebdb;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
-                        #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+        .section ul li {
+            background-color: #fff;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-                        /* Footer */
-                        #footer { background:#eee;}
-                        #footer-inner { margin:auto; text-align:center; padding:12px; width:970px;}
-                        #footer a {color:orange;text-decoration:none;}
+        /* Footer Styling */
+        .footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
 
-                        /* Clear both sides to assist with div alignment  */
-                        .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
-                </style>
-                <script type="text/javascript">
-                        /* =============================
-                        This script generates sample text for the body content. 
-                        You can remove this script and any reference to it. 
-                         ============================= */
-                        var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h2>Heading</h2><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-                        function generateText(sentenceCount){
-                                for (var i=0; i<sentenceCount; i++)
-                                document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-                        }
-                </script>
-        </head>
-        <body>
-                <div id="page">
-                        <header id="header">
-                                <div id="header-inner">
-                                        <div id="logo">
-                                                <h1><a href="#">DevOps<span>Data</span></a></h1>
-                                        </div>
-                                        <div id="top-nav">
-                                                <ul>
-                                                <li><a href="#">About</a></li>
-                                                <li><a href="#">Contact</a></li>
-                                                <li><a href="#">FAQ</a></li>
-                                                <li><a href="#">Help</a></li>
-                                                </ul>
-                                        </div>
-                                        <div class="clr"></div>
-                                </div>
-                        </header>
-                        <div class="feature">
-                                <div class="feature-inner">
-                                <h1>DevOps & Data</h1>
-                                </div>
-                        </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
 
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About</h2>
+        <p>Welcome to our webpage. We are a team of dedicated professionals committed to delivering high-quality solutions to our clients. Our goal is to help businesses grow by providing them with the best-in-class services.</p>
+    </section>
 
-                        <div id="content">
-                                <div id="content-inner">
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Project 1:</strong> E-commerce Platform Development - Built a scalable and responsive e-commerce platform with advanced features like product search, cart management, and secure checkout.
+            </li>
+            <li>
+                <strong>Project 2:</strong> Mobile App Development - Developed a cross-platform mobile application for online education with real-time chat and video conferencing capabilities.
+            </li>
+            <li>
+                <strong>Project 3:</strong> AI Chatbot Integration - Implemented an AI-powered chatbot for customer support, reducing response time and increasing user satisfaction.
+            </li>
+        </ul>
+    </section>
 
-                                        <main id="contentbar">
-                                                <div class="article">
-                                                        <p><script>generateText(12)</script></p>
-                                                </div>
-                                        </main>
+    <!-- Career Section -->
+    <section class="section" id="career">
+        <h2>Career</h2>
+        <p>We are always looking for talented and passionate individuals to join our team. If you are interested in working with us, please send your resume and cover letter to careers@company.com.</p>
+    </section>
 
-                                        <nav id="sidebar">
-                                                <div class="widget">
-                                                        <h3>DevOps & Data</h3>
-                                                        <ul>
-                                                        <li><a href="#">Link 1</a></li>
-                                                        <li><a href="#">Link 2</a></li>
-                                                        <li><a href="#">Link 3</a></li>
-                                                        <li><a href="#">Link 4</a></li>
-                                                        <li><a href="#">Link 5</a></li>
-                                                        </ul>
-                                                </div>
-                                        </nav>
+    <!-- Contact Us Section -->
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for any inquiries or support. You can contact us via email at info@company.com or call us at (123) 456-7890.</p>
+    </section>
 
-                                        <div class="clr"></div>
-                                </div>
-                        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Professional Webpage. All rights reserved.</p>
+    </footer>
 
-                        <div id="footerblurb">
-                                <div id="footerblurb-inner">
-
-                                        <div class="column">
-                                                <h2><span>Heading</span></h2>
-                                                <p><script>generateText(2)</script></p>
-                                        </div>
-                                        <div class="column">
-                                                <h2><span>Heading</span></h2>
-                                                <p><script>generateText(2)</script></p>
-                                        </div>
-                                        <div class="column">
-                                                <h2><span>Heading</span></h2>
-                                                <p><script>generateText(2)</script></p>
-                                        </div>
-
-                                        <div class="clr"></div>
-                                </div>
-                        </div>
-                        <footer id="footer">
-                                <div id="footer-inner">
-                                        <p>&copy; Copyright <a href="#">Your Site</a> &#124; <a href="#">Terms of Use</a> &#124; <a href="#">Privacy Policy</a></p>
-                                        <div class="clr"></div>
-                                </div>
-                        </footer>
-                </div>
-        </body>
+</body>
 </html>
