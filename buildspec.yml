@@ -1,0 +1,37 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11  # Specify Java version. Change it according to your project needs.
+    commands:
+      - echo "Installing Maven"
+      - yum install -y maven  # Install Maven
+      - echo "Maven version:"
+      - mvn -version  # Check the Maven version installed
+  pre_build:
+    commands:
+      - echo "Cleaning project..."
+      - mvn clean  # Clean the project
+  build:
+    commands:
+      - echo "Building the Maven project..."
+      - mvn compile  # Compile the project
+      - echo "Running tests..."
+      - mvn test  # Run the tests
+      - echo "Packaging the application as a WAR file..."
+      - mvn package  # Package the project as a WAR file
+  post_build:
+    commands:
+      - echo "Build completed successfully."
+      - echo "Checking for the generated WAR file..."
+      - ls target/*.war  # List the generated WAR file
+
+artifacts:
+  files:
+    - target/*.war  # Include the generated WAR file in the build artifacts
+  discard-paths: yes  # Flatten the output directory structure for artifacts
+
+cache:
+  paths:
+    - /root/.m2/**/*  # Cache Maven dependencies to speed up subsequent builds
